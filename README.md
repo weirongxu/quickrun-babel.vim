@@ -16,5 +16,5 @@ run babel in javascript filetype when g:quickrun_babel#enable is 1.
 ```vim
 let g:quickrun_babel#enable = 0
 
-:Quickrun javascript/babel
+:QuickRun javascript/babel
 ```
