@@ -1,7 +1,8 @@
 [vim-quickrun](https://github.com/thinca/vim-quickrun) babel support
 
 # Dependencies
-[nodejs](https://github.com/nodejs/node)
+* [vim-quickrun](https://github.com/thinca/vim-quickrun)
+* [nodejs](https://github.com/nodejs/node)
 
 # Configuration
 ```vim
