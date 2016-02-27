@@ -35,6 +35,16 @@ let g:quickrun_config['javascript/babel'] = {
       \ 'tempfile': '%{tempname()}.js',
       \ }
 
+let g:quickrun_config['javascript/babel-compile'] = {
+      \ 'command': 'node',
+      \ 'cmdopt': s:script_path . '/compile.js',
+      \ 'exec': [
+      \   '%c %o %s',
+      \ ],
+      \ 'tempfile': '%{tempname()}.js',
+      \ 'outputter/buffer/filetype': 'javascript',
+      \ }
+
 
 
 let g:loaded_quickrun_babel = 1

@@ -1,27 +1,19 @@
 require('./polyfill');
 var babel = require('./babel');
 var fs = require('fs');
+var compile = require('./compile');
 var argv = process.argv.splice(2);
 
 if (argv.length) {
   var entry_filename = argv[0];
 
-  var compile = function(filename){
-    var result = babel.transform(fs.readFileSync(filename, 'utf-8'), {
-      filename: filename,
-      babelrc: false,
-      presets: [
-        'es2015',
-        'stage-0',
-      ],
-      ast: false,
-    });
-    return result.code;
+  var compile_file = function(filename){
+    return compile(filename);
   };
 
   require.extensions['.js'] = function(module, filename){
     try {
-      module._compile(compile(filename), filename);
+      module._compile(compile_file(filename), filename);
     } catch(e) {
       if (e instanceof Error) {
         console.log(e.message);
