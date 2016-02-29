@@ -8,12 +8,9 @@
 run es6
 ```vim
 :QuickRun
-```
 or
-```vim
 :QuickRun javascript/babel
 ```
-
 compile es6 to javascript
 ```vim
 :QuickRun javascript/babel-compile
