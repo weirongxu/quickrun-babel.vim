@@ -11,7 +11,7 @@ run es6
 or
 :QuickRun javascript/babel
 ```
-compile es6 to javascript
+compile es6 to es5
 ```vim
 :QuickRun javascript/babel-compile
 ```
